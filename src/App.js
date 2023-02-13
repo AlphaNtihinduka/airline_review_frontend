@@ -1,20 +1,17 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Airlines from "./components/Airlines";
+import Airline from "./components/Airline";
 
-const App = () => {
-    const fetchdataDetail = async () => {
-        const response = await axios
-        .get(`http://127.0.0.1:3000/api/v1/airlines`)
-        .catch((err) => {
-            console.log("error: ", err)
-        });
-        console.log(response.data)
-    }
-
-    useEffect(() => {
-        fetchdataDetail()
-    },[]) 
-  return <h1>Hello React and rails</h1>;
-};
+const App = () => (
+    <div>
+    <Router>
+    <Routes>
+      <Route exact path="/" element={<Airlines />} />
+      <Route exact path="/airlines/:slug" element={<Airline />} />
+    </Routes>
+  </Router>
+  </div>
+);
 
 export default App;
