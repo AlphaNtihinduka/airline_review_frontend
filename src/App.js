@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Airlines from "./components/Airlines";
-import Airline from "./components/Airline";
+import Airlines from "./components/airlines/Airlines";
+import Airline from "./components/airline/Airline";
 
 const App = () => (
     <div>
