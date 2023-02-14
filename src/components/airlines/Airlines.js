@@ -27,8 +27,7 @@ const Airlines = () => {
                 <h1>OpenFlights</h1>
                 <p className="subheader">Honest, unbiased airline reviews</p>
             </div>
-            <div className="grid">{airlines_list}</div>
-            
+            <div className="grid">{airlines_list}</div>            
         </div>
     
     )
