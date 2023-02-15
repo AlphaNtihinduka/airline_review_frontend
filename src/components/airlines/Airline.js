@@ -9,7 +9,7 @@ const Airline = (props) => {
     </div>
     <div className="airline_name">{props.attributes.name}</div>
     <div className="airline_score">{props.attributes.avg_score}</div>
-    <div className="airline_link">
+    <div className="link_wrapper">
         <Link to={`/airlines/${props.attributes.slug}`}>View Airline</Link></div>  
     </div>
     )
