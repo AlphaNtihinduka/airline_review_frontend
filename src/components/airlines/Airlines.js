@@ -10,7 +10,6 @@ const Airlines = () => {
         axios.get('http://127.0.0.1:3000/api/v1/airlines')
         .then(resp => {
             setAirlines(resp.data.data)
-            console.log(resp.data.data)
         })
         .catch( resp => console.log(resp))
     }, [airlines.length])
